@@ -9,6 +9,12 @@ public class RecursiveFactorialCalculator {
      * @return the factorial of the given number.
      */
     public static int factorial(int number) {
-        return 0;
+        if (number < 0) {
+            return 0;
+        }
+        if (number == 1 || number == 0) {
+            return 1;
+        }
+        return number * factorial(number - 1);
     }
 }
